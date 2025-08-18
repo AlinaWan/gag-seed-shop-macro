@@ -76,7 +76,7 @@ The macro follows a structured sequence using loops and key presses:
    - This loop ensures all seeds up to the configured **Object Count** are purchased automatically.  
 
 3. **Return sequence after completion**  
-   - Sends `Up` **50 times** to return the highlighter back to the `Sell` teleportation button at the top of the screen.
+   - Sends `Up` **50 times** to scroll the list back to the top.
 
 4. **Loop control**  
    - The macro continuously repeats the cycle while `running` is `true`.  
