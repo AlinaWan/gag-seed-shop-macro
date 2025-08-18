@@ -33,7 +33,11 @@ cd gag-seed-shop-macro
 ## How to Use
 
 ### 1. Open the Seed Shop GUI
-- First, open the seed shop in the game so the macro has the correct interface to interact with.
+- First, open the seed shop in the game so the macro has the correct interface to interact with.  
+- Make sure the seed shop is **freshly opened**:  
+  - The list should be **scrolled all the way to the top**.  
+  - **No seeds** should have their purchase options opened.  
+  - This ensures the macro starts from a predictable state and highlights the correct items.
 
 ### 2. Activate UI Navigation
 Press the `\` key **once**.  
