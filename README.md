@@ -6,12 +6,34 @@ This program automates UI navigation and seed purchasing in the [Roblox](https:/
 
 ---
 
+## Installation
+
+1. **Clone the repository**  
+```bash
+git clone https://github.com/AlinaWan/gag-seed-shop-macro.git
+````
+
+2. **Navigate into the project folder**
+
+```bash
+cd gag-seed-shop-macro
+```
+
+3. **Run the macro**
+
+```powershell
+.\main.ahk
+```
+
+> [!IMPORTANT]
+> Make sure you have [AutoHotkey](https://www.autohotkey.com/) installed on your system before running the script.
+
+---
+
 ## How to Use
 
 ### 1. Open the Seed Shop GUI
 - First, open the seed shop in the game so the macro has the correct interface to interact with.
-
----
 
 ### 2. Activate UI Navigation
 Press the `\` key **once**.  
@@ -19,15 +41,11 @@ Press the `\` key **once**.
 - The first item in your hotbar should be highlighted.  
 - **If it doesn’t work**, make sure UI navigation is enabled in your game settings.
 
----
-
 ### 3. Adjust Object Count (if needed)
 - The field labeled **Object Count** determines the number of **unique seeds** expected in the shop.  
 - Example: With the Beanstalk event update (which adds Romanesco), there are **26 seeds**.  
 - Setting a lower number will limit purchases to that number.  
   - Example: Setting it to `20` will only buy seeds 1–20.  
-
----
 
 ### 4. Start or Stop the Program
 - Press `F6` to **activate** the macro.  
