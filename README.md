@@ -38,7 +38,6 @@ cd gag-seed-shop-macro
 ### 2. Activate UI Navigation
 Press the `\` key **once**.  
 - This enables UI navigation.  
-- The first item in your hotbar should be highlighted.  
 - **If it doesn’t work**, make sure UI navigation is enabled in your game settings.
 
 ### 3. Adjust Object Count (if needed)
@@ -58,7 +57,7 @@ Press the `\` key **once**.
 The macro follows a structured sequence using loops and key presses:
 
 1. **Initial sequence (once per cycle)**  
-   - Sends the `\` key **twice** to activate UI navigation (the program assumes that UI navigation is already enabled to begin with).  
+   - Sends the `\` key **twice** to deactivate and reactivate UI navigation (the program assumes that UI navigation is already enabled to begin with). This highlights the first item in the hotbar.  
    - Waits a short delay (`pressDelay`).  
    - Moves **up 10 times** to highlight the `Sell` teleportation button at the top of the screen.  
    - Sends one `Down` key to highlight the `Close` button in the seed shop GUI.  
