@@ -36,36 +36,59 @@ pressDelay := 100
 loopCount := 26
 running := false
 
-; GUI Setup
-Gui, +AlwaysOnTop
-Gui, Margin, 10, 10
-Gui, Font, s10, Segoe UI
+; --- Gui ---
+Gui, Destroy
+Gui, +AlwaysOnTop +Resize +MinimizeBox
+Gui, Margin, 16, 16
+Gui, Color, 0x2C2F33, 0x2C2F33  ; Discord dark gray
+Gui, Font, s10 cFFFFFF, Segoe UI
 
-; Tabs: Main + Debug only
-Gui, Add, Tab2, x20 y15 w330 h250 vMainTab, Main|Debug
+; --- Header ---
+Gui, Font, s12 c00CED1 Bold, Segoe UI  ; Accent blurple
+Gui, Add, Text, x20 y15 w340 Center vHeaderLink gHeaderLinkEvent, G.A.G Seed Shop Macro
+Gui, Font, s9 cB9BBBE, Segoe UI
+Gui, Add, Text, x20 y40 w340 Center, by Riri
+
+; Tabs
+Gui, Font, s9 cFFFFFF, Segoe UI
+Gui, Add, Tab2, x20 y70 w360 h200 vMainTab +Background23272A, Main|Debug
 
 ; --- MAIN TAB ---
 Gui, Tab, Main
-Gui, Add, Text, x30 y50, Object Count:
-Gui, Add, Edit, vLoopCountEdit x150 y48 w100, %loopCount%
-Gui, Add, Button, gSetLoopCount x255 y47 w90, Set Count
+Gui, Font, s10 c00CED1 Bold, Segoe UI
+Gui, Add, Text, x40 y100, Macro Parameters
+Gui, Font, s10 cFFFFFF, Segoe UI
+Gui, Add, Text, x40 y135, Object Count:
+Gui, Add, Edit, vLoopCountEdit x180 y133 w90 +Background23272A cFFFFFF, %loopCount%
+Gui, Add, Button, gSetLoopCount x280 y132 w80 h24 +Background7289DA cFFFFFF, Apply
 
-Gui, Add, Text, x30 y90, Press Delay (ms):
-Gui, Add, Edit, vDelayEdit x150 y88 w100, %pressDelay%
-Gui, Add, Button, gSetDelay x255 y87 w90, Set Delay
-
-Gui, Add, Text, vStatusText x30 y140, F6: Start/Stop | Status: Suspended
+Gui, Add, Text, x40 y175, Press Delay (ms):
+Gui, Add, Edit, vDelayEdit x180 y173 w90 +Background23272A cFFFFFF, %pressDelay%
+Gui, Add, Button, gSetDelay x280 y172 w80 h24 +Background7289DA cFFFFFF, Apply
 
 ; --- DEBUG TAB ---
 Gui, Tab, Debug
-Gui, Add, Edit, vDebugLog x30 y50 w300 h200 ReadOnly -WantReturn
+Gui, Font, s10 c00CED1 Bold, Segoe UI
+Gui, Add, Text, x40 y100, Debug Output
 
-; Show GUI
-Gui, Show, w380 h300, G.A.G Seed Shop Macro by Riri
+Gui, Font, s9 cE0E0E0, Consolas
+Gui, Add, Edit, vDebugLog x40 y125 w300 h120 ReadOnly -WantReturn +Background1E1E1E cFFFFFF
+
+; --- Status Bar ---
+Gui, Tab
+Gui, Font, s9 cB9BBBE, Segoe UI
+Gui, Add, Text, vStatusText x20 y280 w360 Center, Status: Suspended (Press F6 to toggle)
+
+; --- Show GUI ---
+Gui, Show, w400 h320, G.A.G Seed Shop Macro by Riri
 Return
 
 GuiClose:
 ExitApp
+
+HeaderLinkEvent:
+    Run, https://github.com/AlinaWan/gag-seed-shop-macro
+Return
 
 ; --- Helper logging function ---
 Log(msg) {
@@ -169,4 +192,3 @@ DoWork:
     GuiControl,, StatusText, F6: Start/Stop | Status: Suspended
     Log("Finished")
 Return
-
