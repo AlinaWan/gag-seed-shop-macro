@@ -43,6 +43,12 @@ cd gag-seed-shop-macro
 Press the `\` key **once**.  
 - This enables UI navigation.  
 - **If it doesn’t work**, make sure UI navigation is enabled in your game settings.
+> [!IMPORTANT]
+> Enabling UI navigation for the first time should highlight the first item in your hotbar.
+> If it doesn't, rejoining can sometimes help.
+>
+> UI navigation is sometimes affected by resolution.
+> This navigation sequence was tested on **1920×1080 resolution**, with **Windows 11** and **Roblox in windowed mode**.
 
 ### 3. Adjust Object Count (if needed)
 - The field labeled **Object Count** determines the number of **unique seeds** expected in the shop.  
